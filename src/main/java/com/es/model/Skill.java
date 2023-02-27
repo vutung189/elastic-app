@@ -11,7 +11,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Text;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Skill {
-    @Field(type = Text, analyzer = "english")
+    @Field(type = Text, analyzer = "ngram_analyzer")
     private String name;
 
     private String detail;

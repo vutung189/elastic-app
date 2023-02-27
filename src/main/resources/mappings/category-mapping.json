@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "group": {
+      "type": "text",
+      "index": false
+    },
+    "id": {
+      "type": "text",
+      "index": false
+    },
+    "skills": {
+      "properties": {
+        "detail": {
+          "type": "text",
+          "index": false
+        },
+        "name": {
+          "type": "text",
+          "analyzer": "ngram_analyzer"
+        }
+      }
+    },
+    "title": {
+      "type": "text",
+      "analyzer": "ngram_analyzer"
+    }
+  }
+}
