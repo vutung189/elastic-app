@@ -16,13 +16,17 @@
         },
         "name": {
           "type": "text",
-          "analyzer": "ngram_analyzer"
+          "analyzer": "ngram_analyzer",
+          "search_analyzer": "english_search_analyzer",
+          "fielddata": true
         }
       }
     },
     "title": {
       "type": "text",
-      "analyzer": "ngram_analyzer"
+      "analyzer": "ngram_analyzer",
+      "search_analyzer": "english_search_analyzer",
+      "fielddata": true
     }
   }
 }

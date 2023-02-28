@@ -17,14 +17,15 @@ public interface CategoryRepository extends ElasticsearchRepository<Category, St
             "                    \"match\": {\n" +
             "                        \"title\": {\n" +
             "                            \"query\": \"?0\",\n" +
-            "                            \"boost\": 2\n" +
+            "                            \"boost\": 1\n" +
             "                        }\n" +
             "                    }\n" +
             "                },\n" +
             "                {\n" +
             "                    \"match\": {\n" +
             "                        \"skills.name\": {\n" +
-            "                            \"query\": \"?0\"\n" +
+            "                            \"query\": \"?0\",\n" +
+            "                            \"boost\": 10\n" +
             "                        }\n" +
             "                    }\n" +
             "                }\n" +
