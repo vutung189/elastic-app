@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "lib": ["WebWorker"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "postcss.config.js",
+    "postcss.config.js"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}

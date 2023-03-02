@@ -1,0 +1,46 @@
+{
+  "analysis": {
+
+    "filter": {
+      "ngram_filter": {
+        "type": "ngram",
+        "min_gram": 2,
+        "max_gram": 3
+      },
+      "custom_stop": {
+        "type": "stop",
+        "ignore_case": true,
+        "stopwords_path":"stop_word.txt"
+      },
+      "english_stopwords_filter": {
+        "type": "stop",
+        "stopwords": "_english_"
+      },
+      "synonym_graph_filter": {
+        "type": "synonym_graph",
+        "synonyms_path" : "synonym.txt"
+      }
+    },
+    "analyzer": {
+      "ngram_analyzer": {
+        "type": "custom",
+        "filter": [
+          "lowercase",
+          "ngram_filter"
+        ],
+        "tokenizer": "classic"
+      },
+      "english_search_analyzer": {
+        "type": "custom",
+        "filter": [
+          "lowercase",
+          "english_stopwords_filter",
+          "custom_stop",
+          "synonym_graph_filter",
+          "ngram_filter"
+        ],
+        "tokenizer": "classic"
+      }
+    }
+  }
+}

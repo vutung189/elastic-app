@@ -1,0 +1,5 @@
+# Blank lines and lines starting with pound are comments.
+
+android, mobile
+microservice, back-end
+developer, develop
